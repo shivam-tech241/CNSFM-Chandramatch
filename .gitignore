@@ -1,0 +1,64 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Operating system files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Data & Large Files (never commit raw images or huge binaries)
+*.img
+*.qub
+*.zip
+*.tar.gz
+*.csv.gz
+
+# Results & Cache
+results/*
+!results/.gitkeep
+experiments/runs/*
+!experiments/runs/.gitkeep
+
+# PyTorch / Deep Learning Weights
+*.pt
+*.pth
+*.onnx
+*.weights
+*.bin

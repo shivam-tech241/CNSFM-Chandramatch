@@ -1,0 +1,40 @@
+# Default Configuration for CNSFM Chandrayaan-2 Research Experiment
+
+dataset:
+  root_dir: "D:\\ChandraData\\triplet_1"
+  
+  ohrc:
+    data_dir: "OHRC\\data\\calibrated\\20210405"
+    img_filename: "ch2_ohr_ncp_20210405T1606536730_d_img_d18.img"
+    xml_filename: "ch2_ohr_ncp_20210405T1606536730_d_img_d18.xml"
+    lines: 93693
+    samples: 12000
+    pixel_resolution_m: 0.25
+    dtype: "uint8"
+    endian: "none"
+    sun_azimuth_deg: 269.646098
+    solar_incidence_deg: 75.936949
+
+  tmc2:
+    data_dir: "TMC\\data\\calibrated\\20250807"
+    img_filename: "ch2_tmc_ncf_20250807T1904346039_d_img_d18.img"
+    xml_filename: "ch2_tmc_ncf_20250807T1904346039_d_img_d18.xml"
+    lines: 295234
+    samples: 4000
+    pixel_resolution_m: 5.40
+    dtype: "uint16"
+    endian: "little"
+    sun_azimuth_deg: 108.866212
+    solar_incidence_deg: 41.246015
+
+logging:
+  level: "INFO"
+  log_to_file: true
+  log_dir: "results/logs"
+
+# Placeholder parameters for future pipeline chunks (not implemented yet)
+pipeline:
+  cnsf:
+    k_neighbors: 15
+  mcr:
+    enabled: true
