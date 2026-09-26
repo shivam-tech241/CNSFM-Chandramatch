@@ -29,6 +29,7 @@ from src.crater_detection.base import (
     save_detections_json,
 )
 from src.crater_detection.baseline import BaselineCraterDetector
+from src.crater_detection.yolo import YOLOv9CraterDetector
 from src.crater_detection.tiling import (
     Tile,
     compute_circle_iou,
@@ -36,6 +37,18 @@ from src.crater_detection.tiling import (
     map_tile_detection_to_global,
     run_tiled_detection,
     suppress_duplicate_detections,
+)
+from src.crater_detection.cross_scale import (
+    CandidateCraterPair,
+    CraterNeighborhood,
+    ScaleRepresentationMeta,
+    TMC2AnchorCandidate,
+    compute_cnsf_structural_similarity,
+    construct_crater_neighborhood,
+    create_multiscale_representations,
+    extract_and_project_tmc2_anchors,
+    pair_candidate_craters,
+    plot_cross_scale_pair_contact_sheet,
 )
 from src.crater_detection.visualization import (
     create_qc_contact_sheet,
@@ -49,6 +62,7 @@ __all__ = [
     "BaseCraterDetector",
     "ExternalFileCraterDetector",
     "BaselineCraterDetector",
+    "YOLOv9CraterDetector",
     "Tile",
     "generate_tiles",
     "map_tile_detection_to_global",
@@ -70,4 +84,14 @@ __all__ = [
     "plot_scale_comparison",
     "plot_spatial_density",
     "create_qc_contact_sheet",
+    "ScaleRepresentationMeta",
+    "TMC2AnchorCandidate",
+    "CandidateCraterPair",
+    "CraterNeighborhood",
+    "create_multiscale_representations",
+    "extract_and_project_tmc2_anchors",
+    "pair_candidate_craters",
+    "construct_crater_neighborhood",
+    "compute_cnsf_structural_similarity",
+    "plot_cross_scale_pair_contact_sheet",
 ]
